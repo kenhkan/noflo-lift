@@ -24,6 +24,7 @@
   { "noflo": "0.3.x"
   , "underscore": "1.4.x"
   , "underscore.string": "2.3.x"
+  , "node-uuid": "1.4.x"
   , "noflo-flow": "0.0.x"
   }
 , "devDependencies":
