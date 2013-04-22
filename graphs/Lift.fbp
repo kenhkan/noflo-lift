@@ -1,0 +1,20 @@
+EXPORT=INPUT.IN:IN
+EXPORT=ASSEMBLER.OUT:OUT
+EXPORT=EXTRACT.OUT:LIFT
+EXPORT=ASSEMBLER.IN:RETURN
+
+# Extraction
+Input(Split) OUT -> IN Extract(lift/Extract)
+Pattern(Split) OUT -> PATTERN Extract()
+
+# Caching
+Extract() TOKEN -> IN InToken(Split)
+InToken() OUT -> KEY CacheInput(flow/Cache)
+Input() OUT -> IN CacheInput()
+InToken() OUT -> KEY CachePattern(flow/Cache)
+Pattern() OUT -> IN CachePattern()
+
+# Assembly
+Assembler(lift/Assemble) TOKEN -> IN OutToken(Split)
+OutToken() OUT -> READY CacheInput() OUT -> ORIGINAL Assembler()
+OutToken() OUT -> READY CachePattern() OUT -> PATTERN Assembler()

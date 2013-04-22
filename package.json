@@ -26,6 +26,8 @@
   , "underscore.string": "2.3.x"
   , "node-uuid": "1.4.x"
   , "noflo-flow": "0.0.x"
+  , "noflo-groups": "0.0.x"
+  , "noflo-packets": "0.0.x"
   }
 , "devDependencies":
   { "coffeelint": "*"
@@ -36,7 +38,7 @@
   { "components":
     { "Extractor": "./components/Extractor.coffee"
     , "Assembler": "./components/Assembler.coffee"
-    , "Tokenize": "./components/Tokenize.coffee"
+    , "RandomToken": "./components/RandomToken.coffee"
     }
   , "graphs":
     { "Lift": "./graphs/Lift.fbp"
