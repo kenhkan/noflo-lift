@@ -39,6 +39,8 @@
     }
   , "graphs":
     { "Lift": "./graphs/Lift.fbp"
+    , "Extract": "./graphs/Extract.fbp"
+    , "Assemble": "./graphs/Assemble.fbp"
     }
   }
 , "scripts":

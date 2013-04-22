@@ -25,8 +25,8 @@ Any valid NoFlo data structure
 
 #### PATTERN
 
-A regular JavaScript object denoting the group structure to extract. For
-instance, in XML schematics, if you have an incoming data structure:
+A pattern is a path-like array denoting the group structure to extract.
+For instance, in XML schematics, if you have an incoming data structure:
 
     <GroupA>
       <GroupB>
@@ -46,10 +46,7 @@ instance, in XML schematics, if you have an incoming data structure:
 And you want to extract just `GroupC` for processing, you would pass in,
 in JSON:
 
-    { "GroupA": { "GroupB": { "GroupC": "*" } } }
-
-The value field is for how many data packets to lift. For now, only `*`
-is allowed, which lifts everything within a group.
+    [ "GroupA", "GroupB", "GroupC" ]
 
 #### RETURN
 
