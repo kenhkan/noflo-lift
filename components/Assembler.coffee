@@ -21,7 +21,7 @@ class Assembler extends noflo.Component
       out: new noflo.Port
 
     @inPorts.pattern.on "data", (pattern) =>
-      @pattern = pattern if _.isArray(pattern)
+      @pattern = _.map pattern, (p) -> new RegExp(p) if _.isArray(pattern)
 
     @inPorts.replacement.on "connect", =>
       @cache.connect()
@@ -65,6 +65,11 @@ class Assembler extends noflo.Component
       @outPorts.out.disconnect()
 
   matchPattern: ->
-    _.isEqual(@groups.slice(0, @pattern.length), @pattern)
+    groups = @groups.slice(0, @pattern.length)
+
+    for p, i in @pattern
+      return false unless groups[i]?.match(p)?
+
+    return true
 
 exports.getComponent = -> new Assembler
