@@ -7,7 +7,7 @@
   , "subset"
   ]
 , "author": "Kenneth Kan <kenhkan@gmail.com>"
-, "version": "0.0.1"
+, "version": "0.0.2"
 , "licenses":
   [ { "type": "MIT"
     , "url": "https://github.com/kenhkan/noflo-lift/blob/master/LICENSE.md"
@@ -24,7 +24,7 @@
   { "noflo": "0.3.x"
   , "underscore": "1.4.x"
   , "underscore.string": "2.3.x"
-  , "node-uuid": "1.4.x"
+  , "noflo-swiss": "0.0.x"
   , "noflo-flow": "0.0.x"
   , "noflo-groups": "0.0.x"
   , "noflo-packets": "0.0.x"
@@ -38,7 +38,6 @@
   { "components":
     { "Extractor": "./components/Extractor.coffee"
     , "Assembler": "./components/Assembler.coffee"
-    , "RandomToken": "./components/RandomToken.coffee"
     }
   , "graphs":
     { "Lift": "./graphs/Lift.fbp"

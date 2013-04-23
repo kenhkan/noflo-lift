@@ -4,7 +4,7 @@ EXPORT=TOKEN.OUT:TOKEN
 EXPORT=EXTRACTED.OUT:EXTRACTED
 
 Input(Split) OUT -> IN Extractor(lift/Extractor)
-Input() OUT -> IN RandomToken(lift/RandomToken) OUT -> IN Token(Split)
+Input() OUT -> IN RandomToken(swiss/UUID) OUT -> IN Token(Split)
 
 Token() OUT -> GROUP EXTRACTED(Group)
 Extractor() OUT -> IN EXTRACTED()
