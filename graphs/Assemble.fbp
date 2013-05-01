@@ -5,4 +5,4 @@ EXPORT=ASSEMBLER.PATTERN:PATTERN
 EXPORT=ASSEMBLER.OUT:OUT
 
 Input(Split) OUT -> REPLACEMENT Assembler(lift/Assembler)
-Input() OUT -> IN ReadGroup(groups/Read) OUT -> IN Token(packets/First)
+Input() OUT -> IN ReadGroup(groups/ReadGroups) OUT -> IN Token(packets/First)
