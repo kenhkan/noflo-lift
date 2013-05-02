@@ -11,7 +11,7 @@ class Assembler extends noflo.Component
 
   constructor: ->
     @cache = new CacheStorage
-    @pattern = []
+    @patterns = []
 
     @inPorts =
       in: new noflo.Port
@@ -20,8 +20,11 @@ class Assembler extends noflo.Component
     @outPorts =
       out: new noflo.Port
 
+    @inPorts.pattern.on "connect", =>
+      @patterns = []
+
     @inPorts.pattern.on "data", (pattern) =>
-      @pattern = _.map pattern, (p) -> new RegExp(p) if _.isArray(pattern)
+      @patterns.push new RegExp pattern
 
     @inPorts.replacement.on "connect", =>
       @cache.connect()
@@ -65,9 +68,9 @@ class Assembler extends noflo.Component
       @outPorts.out.disconnect()
 
   matchPattern: ->
-    groups = @groups.slice(0, @pattern.length)
+    groups = @groups.slice(0, @patterns.length)
 
-    for p, i in @pattern
+    for p, i in @patterns
       return false unless groups[i]?.match(p)?
 
     return true
