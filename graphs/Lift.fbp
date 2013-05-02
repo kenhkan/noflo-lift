@@ -1,20 +1,23 @@
+EXPORT=PATTERN.IN:PATTERN
 EXPORT=INPUT.IN:IN
 EXPORT=ASSEMBLER.OUT:OUT
-EXPORT=EXTRACT.OUT:LIFT
-EXPORT=ASSEMBLER.IN:RETURN
+EXPORT=EXTRACT.OUT:EXTRACTED
+EXPORT=TOKEN.OUT:EXTOKEN
+EXPORT=ASSEMBLER.REPLACEMENT:RETURN
+EXPORT=RETURNTOKEN.IN:RETOKEN
+
+# Save the patterns
+Pattern(Split) OUT -> PATTERN Assembler(lift/Assembler)
+Pattern() OUT -> PATTERN Extract(lift/Extractor)
 
 # Extraction
-Input(Split) OUT -> IN Extract(lift/Extract)
-Pattern(Split) OUT -> PATTERN Extract()
+Input(flow/Split) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(Split)
+Input() OUT -> IN Extract()
 
 # Caching
-Extract() TOKEN -> IN InToken(Split)
-InToken() OUT -> KEY CacheInput(flow/Cache)
+Token() OUT -> KEY CacheInput(flow/Cache)
 Input() OUT -> IN CacheInput()
-InToken() OUT -> KEY CachePattern(flow/Cache)
-Pattern() OUT -> IN CachePattern()
 
 # Assembly
-Assembler(lift/Assemble) TOKEN -> IN OutToken(Split)
-OutToken() OUT -> READY CacheInput() OUT -> ORIGINAL Assembler()
-OutToken() OUT -> READY CachePattern() OUT -> PATTERN Assembler()
+ReturnToken(Split) OUT -> KEY CacheInput()
+ReturnToken() OUT -> READY CacheInput() OUT -> IN Assembler()

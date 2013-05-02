@@ -54,6 +54,11 @@ The processed data structure must be returned to this port to continue
 its journal through the `OUT` port. See the `PROCESS` out port for
 details.
 
+#### RETOKEN
+
+Standing for REturnTOKEN, this port accepts a token to be used to
+retrieve what was stored in order for the returned object to replace it.
+
 #### CACHESIZE
 
 noflo-lift does not have a cache limit as it expects you to finish
@@ -71,8 +76,14 @@ noflo-lift emits data via these ports:
 The data structure that has been processed and plugged back in is
 emitted to this port.
 
-#### PROCESS
+#### EXTRACTED
 
-The *extracted* data structure is emitted here. It is grouped at the
+The extracted data structure is emitted here. It is grouped at the
 top-level by a token, which must group the processed data structure on
 return to the `RETURN` in port.
+
+#### EXTOKEN
+
+Standing for EXtractedTOKEN, this port emits the token when a
+sub-structure is extracted so Lift can identify which structure to
+replace when a new sub-structure is returned.
