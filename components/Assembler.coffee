@@ -55,6 +55,7 @@ class Assembler extends noflo.Component
       if @matchPattern() and not @hasMatched
         @hasMatched = true
         @cache.flushCache(@outPorts.out)
+        @cache.reset()
 
     @inPorts.in.on "data", (data) =>
       @outPorts.out.send(data) unless @matchPattern()

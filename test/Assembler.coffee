@@ -3,7 +3,8 @@ test = require "noflo-test"
 test.component("lift/Assembler").
   discuss("takes a pattern").
     send.connect("pattern").
-      send.data("pattern", ["a", "c"]).
+      send.data("pattern", "a").
+      send.data("pattern", "c").
     send.disconnect("pattern").
   discuss("takes the replacement data structure").
     send.connect("replacement").
@@ -43,7 +44,8 @@ test.component("lift/Assembler").
   next().
   discuss("pattern is all regexp strings").
     send.connect("pattern").
-      send.data("pattern", ["^a$", "c.+"]).
+      send.data("pattern", "^a$").
+      send.data("pattern", "c.+").
     send.disconnect("pattern").
   discuss("takes the replacement data structure").
     send.connect("replacement").
