@@ -33,7 +33,7 @@ class Assembler extends noflo.Component
       @cache.beginGroup(group)
 
     @inPorts.replacement.on "data", (data) =>
-      @cache.data(data)
+      @cache.send(data)
 
     @inPorts.replacement.on "endgroup", (group) =>
       @cache.endGroup(group)
