@@ -11,7 +11,7 @@ Pattern(Split) OUT -> PATTERN Assembler(lift/Assembler)
 Pattern() OUT -> PATTERN Extract(lift/Extractor)
 
 # Extraction
-Input(flow/Split) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(Split)
+Input(flow/CleanSplit) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(Split)
 Input() OUT -> IN Extract()
 
 # Caching
