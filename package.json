@@ -8,7 +8,7 @@
     "subset"
   ],
   "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "licenses": [
     {
       "type": "MIT",
@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/kenhkan/noflo-lift"
+    "url": "~0.0.6"
   },
   "dependencies": {
     "noflo": "~0.4.0",
