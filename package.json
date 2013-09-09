@@ -20,14 +20,14 @@
     "url": "git://github.com/kenhkan/noflo-lift"
   },
   "dependencies": {
-    "noflo": "~0.3.3",
+    "noflo": "~0.4.0",
     "underscore": "1.4.x",
     "underscore.string": "2.3.x",
     "noflo-swiss": "0.0.x",
     "noflo-flow": "0.0.x",
     "noflo-groups": "0.0.x",
     "noflo-packets": "0.0.x",
-    "noflo-test": "0.0.5"
+    "noflo-test": "~0.0.5"
   },
   "devDependencies": {
     "grunt-exec": "~0.4.2",

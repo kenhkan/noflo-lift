@@ -1,5 +1,4 @@
-Lift Packets for Processing in NoFlo [![Build Status](https://secure.travis-ci.org/kenhkan/noflo-lift.png?branch=master)](https://travis-ci.org/kenhkan/noflo-lift)
-===============================
+# Lift Packets for Processing in NoFlo <br/>[![Build Status](https://secure.travis-ci.org/kenhkan/noflo-lift.png?branch=master)](http://travis-ci.org/kenhkan/noflo-lift) [![Dependency Status](https://gemnasium.com/kenhkan/noflo-lift.png)](https://gemnasium.com/kenhkan/noflo-lift) [![NPM version](https://badge.fury.io/js/noflo-lift.png)](http://badge.fury.io/js/noflo-lift) [![Stories in Ready](https://badge.waffle.io/kenhkan/noflo-lift.png)](http://waffle.io/kenhkan/noflo-lift)
 
 In a [NoFlo](http://noflojs.org/) program, how the program processes
 data is more important than the data structure. It is evident in that
@@ -14,8 +13,7 @@ object for further processing on just that one piece. It then accepts
 some data structure that noflo-lift would then insert back in place.
 
 
-In Ports
-------------------------------
+## In Ports
 
 noflo-lift accepts data via these ports:
 
@@ -66,8 +64,7 @@ processing on all opened requests. You may optionally set a cache size
 if you deal with asynchronous operations that may fail.
 
 
-Out Ports
-------------------------------
+## Out Ports
 
 noflo-lift emits data via these ports:
 
