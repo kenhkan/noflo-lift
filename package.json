@@ -27,7 +27,7 @@
     "noflo-flow": "0.0.x",
     "noflo-groups": "0.0.x",
     "noflo-packets": "0.0.x",
-    "noflo-test": "~0.0.5"
+    "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/master"
   },
   "devDependencies": {
     "grunt-exec": "~0.4.2",
