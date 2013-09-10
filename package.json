@@ -56,5 +56,8 @@
     "graphs": {
       "Lift": "./graphs/Lift.fbp"
     }
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }
