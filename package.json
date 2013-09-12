@@ -8,7 +8,7 @@
     "subset"
   ],
   "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "licenses": [
     {
       "type": "MIT",
@@ -24,7 +24,7 @@
     "underscore": "1.4.x",
     "underscore.string": "2.3.x",
     "noflo-swiss": "0.0.x",
-    "noflo-flow": "0.0.x",
+    "noflo-flow": "~0.2.0",
     "noflo-groups": "0.0.x",
     "noflo-packets": "0.0.x",
     "noflo-test": "https://github.com/kenhkan/noflo-test/tarball/master"
