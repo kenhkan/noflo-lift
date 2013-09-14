@@ -7,17 +7,17 @@ EXPORT=ASSEMBLER.REPLACEMENT:RETURN
 EXPORT=RETURNTOKEN.IN:RETOKEN
 
 # Save the patterns
-Pattern(Split) OUT -> PATTERN Assembler(lift/Assembler)
+Pattern(core/Split) OUT -> PATTERN Assembler(lift/Assembler)
 Pattern() OUT -> PATTERN Extract(lift/Extractor)
 
 # Extraction
-Input(flow/CleanSplit) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(Split)
+Input(flow/CleanSplit) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(core/Split)
 Input() OUT -> IN Extract()
 
 # Caching
-Token() OUT -> KEY CacheInput(flow/Cache)
+Token() OUT -> KEY CacheInput(cache/Cache)
 Input() OUT -> IN CacheInput()
 
 # Assembly
-ReturnToken(Split) OUT -> KEY CacheInput()
+ReturnToken(core/Split) OUT -> KEY CacheInput()
 ReturnToken() OUT -> READY CacheInput() OUT -> IN Assembler()
