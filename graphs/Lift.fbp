@@ -2,7 +2,7 @@ EXPORT=PATTERN.IN:PATTERN
 EXPORT=INPUT.IN:IN
 EXPORT=ASSEMBLER.OUT:OUT
 EXPORT=EXTRACT.OUT:EXTRACTED
-EXPORT=TOKEN.OUT:EXTOKEN
+EXPORT=EXTOKEN.OUT:EXTOKEN
 EXPORT=ASSEMBLER.REPLACEMENT:RETURN
 EXPORT=RETURNTOKEN.IN:RETOKEN
 
@@ -11,7 +11,7 @@ Pattern(core/Split) OUT -> PATTERN Assembler(lift/Assembler)
 Pattern() OUT -> PATTERN Extract(lift/Extractor)
 
 # Extraction
-Input(flow/CleanSplit) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(core/Split)
+Input(flow/CleanSplit) OUT -> IN RandomToken(swiss/RandomUuid) OUT -> IN Token(core/Split) OUT -> IN ExToken(core/Repeat)
 Input() OUT -> IN Extract()
 
 # Caching
