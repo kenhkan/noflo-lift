@@ -8,7 +8,7 @@
     "subset"
   ],
   "author": "Kenneth Kan <kenhkan@gmail.com>",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "licenses": [
     {
       "type": "MIT",
@@ -21,15 +21,15 @@
   },
   "dependencies": {
     "noflo": "~0.4.0",
-    "underscore": "1.4.x",
-    "underscore.string": "2.3.x",
-    "noflo-swiss": "0.0.x",
-    "noflo-flow": "~0.2.0",
-    "noflo-groups": "0.0.x",
-    "noflo-packets": "0.0.x",
+    "underscore": "~1.4.0",
+    "underscore.string": "~2.3.0",
+    "noflo-swiss": "~0.0.1",
+    "noflo-flow": "~0.3.2",
+    "noflo-groups": "~0.0.1",
+    "noflo-packets": "~0.0.1",
     "noflo-test": "~0.0.6",
-    "nohoarder": "0.0.2",
-    "noflo-cache": "0.0.1"
+    "nohoarder": "~0.0.2",
+    "noflo-cache": "~0.0.1"
   },
   "devDependencies": {
     "grunt-exec": "~0.4.2",
